@@ -1,0 +1,55 @@
+<!-- Registration validation error messages -->
+<% if (typeof registrationError !== 'undefined' && registrationError) { %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">    
+        <p>INVALID DATA ENTERED.</p>
+        <p>Please note the following before retrying :-</p>
+        <ul>
+            <li>All fields are mandatory.</li>
+            <li>Email must be valid.</li>
+            <li>Email must not already exist in our records.</li>
+            <li>Password must be <em>at least</em> 6 characters long.</li>
+            <li>Passwords must match.</li>
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+
+<% if (registrationSuccess != '') { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">    
+        <%= registrationSuccess %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+
+<% if (loginError != '') { %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">    
+        <%= loginError %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+
+<% if (logoutSuccess != '') { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">    
+        <%= logoutSuccess %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+
+<% if (unauthorizedError != '') { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">    
+        <%= unauthorizedError %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+
+
